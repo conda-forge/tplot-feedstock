@@ -32,7 +32,7 @@ test:
   imports:
     - tplot
   commands:
-    - pip check
+    - pip list | grep -E '{{ name }}\s+{{ version }}'
   requires:
     - pip
 
