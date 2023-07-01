@@ -39,7 +39,7 @@ about:
   doc_url: https://tplot.readthedocs.io/en/latest/
   summary: Create text-based graphs
   license: MIT
-  license_file: LICENSE
+  license_file: LICENSE.txt
 
 extra:
   recipe-maintainers:
