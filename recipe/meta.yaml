@@ -1,5 +1,5 @@
 {% set name = "tplot" %}
-{% set version = "0.3.5" %}
+{% set version = "0.3.6" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tplot-{{ version }}.tar.gz
-  sha256: d4fcb8c1d1faa706dad471473bc2b95f57cc85ad5dc83702684e22e03ce31f4c
+  sha256: 6b3564f591679e728d441693d0266630f5333210984d0a16de87f2d47ce21790
 
 build:
   noarch: python
