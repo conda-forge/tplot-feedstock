@@ -7,23 +7,23 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/tplot-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/tplot-{{ version }}.tar.gz
   sha256: 6b3564f591679e728d441693d0266630f5333210984d0a16de87f2d47ce21790
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
     - flit-core >=3.2,<4
     - pip
-    - python >=3.8,<4
+    - python {{ python_min }}
   run:
     - colorama >=0.4.3
     - numpy >=1.11
-    - python >=3.8,<4
+    - python >={{ python_min }},<4
     - termcolor >=1.1.0
 
 test:
@@ -33,6 +33,7 @@ test:
     - pip list | grep -E '{{ name }}\s+{{ version }}'
   requires:
     - pip
+    - python {{ python_min }}
 
 about:
   home: https://github.com/JeroenDelcour/tplot
